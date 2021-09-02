@@ -1,8 +1,8 @@
-# Brian Dashboard
+# Neuron Dashboard
 
 
 
-![Cover](https://github.com/Ziaeemehr/neuron_dash/blob/master/neuron_dash/apps/Montbrio.mp4)
+![Cover](https://github.com/Ziaeemehr/neuron_dash/blob/master/neuron_dash/apps/assets/app_montbrio.jpg)
 <p align="center">
 
 ### Installation
