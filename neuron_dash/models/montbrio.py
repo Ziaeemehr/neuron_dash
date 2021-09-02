@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-import pylab as plt
+# import pylab as plt
 from numpy import pi
 from os.path import join
 from scipy.integrate import odeint
@@ -181,67 +181,3 @@ if __name__ == "__main__":
     # ax.quiver(phi1, phi2, dphi1_dt, dphi2_dt)
 
 
-# def simulate_montbrio(par, par_current, value):
-
-#     def Iapp(t):
-
-#         # dur = t_end - t_start
-
-#         if value == 1:  # step
-#             if (t <= t_start) or (t >= t_end):
-#                 return 0.0
-#             else:
-#                 return amplitude
-
-#         elif value == 2:  # ramp
-#             if (t <= t_start) or (t >= t_end):
-#                 return 0.0
-#             else:
-#                 slope = (amplitude_end - amplitude_start) / \
-#                     float((t_end - t_start))
-#                 ramp = amplitude_start + (t-t_start) * slope
-#                 return ramp
-#         else:
-#             phi = t * frequency/1000
-#             phi = phi * 2. * pi + phase_offset
-#             c = np.sin(phi)
-#             c = (direct_current + c * amplitude)
-#             return c
-
-#     def rhs(x0, t):
-#         r, v = x0
-#         drdt = Delta / (tau * pi * r) + 2 * r*v / tau
-#         dvdt = 1.0/tau * (v**2 + eta + Iapp(t) + J *
-#                           tau * r - (pi * tau * r)**2)
-
-#         return np.array([drdt, dvdt])
-
-#     J = filter_dataframe(par, "J")
-#     r0 = filter_dataframe(par, "r0")
-#     v0 = filter_dataframe(par, "v0")
-#     eta = filter_dataframe(par, "eta")
-#     tau = filter_dataframe(par, "tau")
-#     Delta = filter_dataframe(par, "Delta")
-#     t_simulation = filter_dataframe(par, "simulation time")
-#     dt = filter_dataframe(par, "dt")
-#     initial_state = [r0, v0]
-
-#     t_end = filter_dataframe(par_current, "end time")
-#     t_start = filter_dataframe(par_current, "start time")
-
-#     if value == 1:
-#         amplitude = filter_dataframe(par_current, "amplitude")
-#     elif value == 2:
-#         amplitude_end = filter_dataframe(par_current, "amplitude end")
-#         amplitude_start = filter_dataframe(par_current, "amplitude start")
-#     else:
-#         frequency = filter_dataframe(par_current, "frequency")
-#         direct_current = filter_dataframe(par_current, "direct current")
-#         phase_offset = filter_dataframe(par_current, "phase offset")
-#         amplitude = filter_dataframe(par_current, "amplitude")
-
-#     times = np.arange(0, t_simulation, dt)
-#     x = odeint(rhs, initial_state, times)
-#     I = [Iapp(t) for t in times]
-
-#     return {"t": times, "r": x[:, 0], "v": x[:, 1], "I": I}

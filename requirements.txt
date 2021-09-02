@@ -1,3 +1,4 @@
+wheel
 dash-bootstrap-components
 numpy
 scipy
