@@ -1,0 +1,17 @@
+parameter,value,unit,category,step,ramp,sin
+J,15,_,par,,,
+eta,-5,_,par,,,
+tau,1,ms,par,,,
+Delta,1,_,par,,,
+simulation time,80,ms,par,,,
+dt,0.01,ms,par,,,
+r0,1.5,_,par,,,
+v0,-2,ms,par,,,
+start time,10,ms,cur,1,1,1
+end time,70,ms,cur,1,1,1
+amplitude,3,uA,cur,1,,1
+amplitude start,1,uA,cur,,1,
+amplitude end,2.5,uA,cur,,1,
+frequency,40,Hz,cur,,,1
+direct current,0,uA,cur,,,1
+phase offset,0.6,rad,cur,,,1
