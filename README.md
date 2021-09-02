@@ -2,20 +2,20 @@
 
 
 
-![Cover](https://github.com/Ziaeemehr/brian_dash/blob/master/brian_dash/apps/data/HH.jpg)
+![Cover](https://github.com/Ziaeemehr/neuron_dash/blob/master/neuron_dash/apps/Montbrio.mp4)
 <p align="center">
 
 ### Installation
 
-```sh
-pip3 install brian_dash
-```
-
-or from source file
 
 
 ```sh
-cd brian_dash # directory that have setup.py
+# making an virtual environment
+
+python3 -m venv my_ve
+source my_ve/bin/activate
+
+cd neuron_dash # directory that have setup.py
 pip3 install -e .
 ```
 
@@ -23,11 +23,10 @@ pip3 install -e .
 #### prerequisite:
 
 ```
+wheel
 dash-bootstrap-components
-brian2
 numpy
 scipy
-cython
 dash
 pandas
 ```
